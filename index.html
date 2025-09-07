@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription Étudiant</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-wrapper">
+        <div class="form-header">
+          <h1>INSCRIPTION ÉTUDIANT</h1>
+          <p>Remplissez tous les champs pour continuer à l'étape suivante</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <div class="progress-steps">
+            <div class="step active" data-step="1">
+              <div class="step-icon">
+                <i class="icon-user"></i>
+              </div>
+              <span>Compte</span>
+            </div>
+            <div class="step" data-step="2">
+              <div class="step-icon">
+                <i class="icon-person"></i>
+              </div>
+              <span>Personnel</span>
+            </div>
+            <div class="step" data-step="3">
+              <div class="step-icon">
+                <i class="icon-education"></i>
+              </div>
+              <span>Études</span>
+            </div>
+            <div class="step" data-step="4">
+              <div class="step-icon">
+                <i class="icon-check"></i>
+              </div>
+              <span>Confirmation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Steps -->
+        <form id="studentForm">
+          <!-- Step 1: Account Information -->
+          <div class="form-step active" data-step="1">
+            <div class="step-header">
+              <h2>Informations du Compte</h2>
+              <span class="step-indicator">Étape 1 - 4</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+              <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="username">Nom d'utilisateur *</label>
+              <input type="text" id="username" name="username" required>
+              <span class="error-message" id="username-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Mot de passe *</label>
+              <input type="password" id="password" name="password" required>
+              <span class="error-message" id="password-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword">Confirmer le mot de passe *</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" required>
+              <span class="error-message" id="confirmPassword-error"></span>
+            </div>
+          </div>
+
+          <!-- Step 2: Personal Information -->
+          <div class="form-step" data-step="2">
+            <div class="step-header">
+              <h2>Informations Personnelles</h2>
+              <span class="step-indicator">Étape 2 - 4</span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">Prénom *</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <span class="error-message" id="firstName-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="lastName">Nom de famille *</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <span class="error-message" id="lastName-error"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="dateOfBirth">Date de naissance *</label>
+              <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+              <span class="error-message" id="dateOfBirth-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Téléphone *</label>
+              <div class="phone-input-container">
+                <select id="countryCode" name="countryCode" class="country-select" required>
+                  <option value="+33">🇫🇷 +33</option>
+                  <option value="+1">🇺🇸 +1</option>
+                  <option value="+44">🇬🇧 +44</option>
+                  <option value="+49">🇩🇪 +49</option>
+                  <option value="+39">🇮🇹 +39</option>
+                  <option value="+34">🇪🇸 +34</option>
+                  <option value="+31">🇳🇱 +31</option>
+                  <option value="+32">🇧🇪 +32</option>
+                  <option value="+41">🇨🇭 +41</option>
+                  <option value="+43">🇦🇹 +43</option>
+                  <option value="+351">🇵🇹 +351</option>
+                  <option value="+46">🇸🇪 +46</option>
+                  <option value="+47">🇳🇴 +47</option>
+                  <option value="+45">🇩🇰 +45</option>
+                  <option value="+358">🇫🇮 +358</option>
+                  <option value="+353">🇮🇪 +353</option>
+                  <option value="+30">🇬🇷 +30</option>
+                  <option value="+48">🇵🇱 +48</option>
+                  <option value="+420">🇨🇿 +420</option>
+                  <option value="+36">🇭🇺 +36</option>
+                  <option value="+40">🇷🇴 +40</option>
+                  <option value="+359">🇧🇬 +359</option>
+                  <option value="+385">🇭🇷 +385</option>
+                  <option value="+386">🇸🇮 +386</option>
+                  <option value="+421">🇸🇰 +421</option>
+                  <option value="+370">🇱🇹 +370</option>
+                  <option value="+371">🇱🇻 +371</option>
+                  <option value="+372">🇪🇪 +372</option>
+                  <option value="+212">🇲🇦 +212</option>
+                  <option value="+213">🇩🇿 +213</option>
+                  <option value="+216">🇹🇳 +216</option>
+                  <option value="+20">🇪🇬 +20</option>
+                  <option value="+27">🇿🇦 +27</option>
+                  <option value="+81">🇯🇵 +81</option>
+                  <option value="+82">🇰🇷 +82</option>
+                  <option value="+86">🇨🇳 +86</option>
+                  <option value="+91">🇮🇳 +91</option>
+                  <option value="+61">🇦🇺 +61</option>
+                  <option value="+64">🇳🇿 +64</option>
+                  <option value="+55">🇧🇷 +55</option>
+                  <option value="+52">🇲🇽 +52</option>
+                  <option value="+54">🇦🇷 +54</option>
+                  <option value="+56">🇨🇱 +56</option>
+                  <option value="+57">🇨🇴 +57</option>
+                  <option value="+51">🇵🇪 +51</option>
+                  <option value="+58">🇻🇪 +58</option>
+                </select>
+                <input type="tel" id="phone" name="phone" class="phone-input" placeholder="123456789" required>
+              </div>
+              <span class="error-message" id="phone-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Adresse *</label>
+              <textarea id="address" name="address" rows="3" required></textarea>
+              <span class="error-message" id="address-error"></span>
+            </div>
+          </div>
+
+          <!-- Step 3: Student Details -->
+          <div class="form-step" data-step="3">
+            <div class="step-header">
+              <h2>Détails des Études</h2>
+              <span class="step-indicator">Étape 3 - 4</span>
+            </div>
+
+            <div class="form-group">
+              <label for="studentId">Numéro d'étudiant *</label>
+              <input type="text" id="studentId" name="studentId" required>
+              <span class="error-message" id="studentId-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="university">Université *</label>
+              <select id="university" name="university" required>
+                <option value="">Sélectionnez votre université</option>
+                <option value="sorbonne">Université de la Sorbonne</option>
+                <option value="sciences-po">Sciences Po</option>
+                <option value="polytechnique">École Polytechnique</option>
+                <option value="hec">HEC Paris</option>
+                <option value="autre">Autre</option>
+              </select>
+              <span class="error-message" id="university-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="program">Programme d'études *</label>
+              <input type="text" id="program" name="program" required>
+              <span class="error-message" id="program-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="yearOfStudy">Année d'études *</label>
+              <select id="yearOfStudy" name="yearOfStudy" required>
+                <option value="">Sélectionnez votre année</option>
+                <option value="1">1ère année</option>
+                <option value="2">2ème année</option>
+                <option value="3">3ème année</option>
+                <option value="4">4ème année</option>
+                <option value="5">5ème année</option>
+                <option value="master1">Master 1</option>
+                <option value="master2">Master 2</option>
+                <option value="doctorat">Doctorat</option>
+              </select>
+              <span class="error-message" id="yearOfStudy-error"></span>
+            </div>
+          </div>
+
+          <!-- Step 4: Confirmation -->
+          <div class="form-step" data-step="4">
+            <div class="step-header">
+              <h2>Confirmation</h2>
+              <span class="step-indicator">Étape 4 - 4</span>
+            </div>
+
+            <div class="confirmation-summary">
+              <h3>Résumé de votre inscription</h3>
+              <div class="summary-content" id="summaryContent">
+                <!-- Summary will be populated by JavaScript -->
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="termsAccepted" name="termsAccepted" required>
+                <span class="checkmark"></span>
+                J'accepte les <a href="#" target="_blank">conditions d'utilisation</a> et la <a href="#" target="_blank">politique de confidentialité</a> *
+              </label>
+              <span class="error-message" id="termsAccepted-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <span class="checkmark"></span>
+                Je souhaite recevoir des informations par email
+              </label>
+            </div>
+          </div>
+
+          <!-- Form Navigation -->
+          <div class="form-navigation">
+            <button type="button" id="prevBtn" class="btn btn-secondary">Précédent</button>
+            <button type="button" id="nextBtn" class="btn btn-primary">Suivant</button>
+            <button type="submit" id="submitBtn" class="btn btn-success" style="display: none;">Valider l'inscription</button>
+          </div>
+        </form>
+
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage" style="display: none;">
+          <div class="success-icon">✓</div>
+          <h2>Inscription réussie !</h2>
+          <p>Votre compte étudiant a été créé avec succès. Un email de confirmation vous a été envoyé.</p>
+          <button type="button" class="btn btn-primary" onclick="window.location.reload()">Nouvelle inscription</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
